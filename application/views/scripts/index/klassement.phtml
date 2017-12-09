@@ -1,0 +1,40 @@
+<?php if (!empty($this->msgid)) {?>
+<div class='msg_ok'><?php echo $this->translate('Bedankt voor je deelname!');?></div>
+<br/>
+<?php }?>
+<?php 
+$ii=0;
+if (!empty($this->result)){
+?>
+<div class="hoofding"><?php echo $this->translate('Algemene rangschikking');?></div>
+<br/>
+<table  class="gridtable" style="width:50%;margin-left:25%;font-size:16px;">
+	<thead>
+	<tr>
+		<th><?php echo $this->translate('Nr'); ?></th>
+		<th><?php echo $this->translate('Naam'); ?></th>               
+		<th style="text-align:right;"><?php echo $this->translate('Punten'); ?>&nbsp;&nbsp;</th>
+	</tr>
+	</thead>
+	<tbody>
+        <?php foreach ($this->result as $r) { ?>
+        <?php $ii++;?>
+	<tr>
+		<td align='center'>
+                    <?php echo $r['betaald']?$ii:"<font color='red'>".$ii."</font>"; ?>   
+		</td>
+		<td>
+		<?php if ($this->view) {?>
+					<a href="<?php echo $this->baseUrl();?>/index/detail/id/<?php echo $r['id']; ?>"><?php echo $r['naam']; ?></a>   
+		<?php } else {?>        
+                    <?php echo $r['betaald']?$r['naam']:"<font color='red'>".$r['naam']."</font>"; ?>   
+		<?php }?>
+		</td>
+        <td style="text-align:right;"><?php echo $r['score']; ?>&nbsp;&nbsp;</td>
+	</tr>
+	
+        <?php } ?>
+	</tbody>	
+</table>
+<?php 
+}

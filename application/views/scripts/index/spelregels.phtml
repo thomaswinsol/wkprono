@@ -1,0 +1,68 @@
+﻿<?php
+$this->placeholder('mainTitle')->set($this->ShowMessages($this->flashMessenger));
+?>
+
+<fieldset style="margin:10px;text-align:left;padding:10px;">
+<legend style="font-size:16px;"><?php echo $this->translate('Spelregels'); ?></legend>
+<h3><?php echo $this->translate('In drie onderdelen zijn er punten te winnen.'); ?></h3>
+<ol>
+<li>
+<strong>  <?php echo $this->translate('Voorspel uitslagen'); ?></strong>
+<ul>
+<li><?php echo $this->translate('5 punten indien je de uitslag correct voorspeld hebt'); ?></li>
+<li><?php echo $this->translate('3 punten als je de winnaar, de verliezer of het gelijkspel voorspeld had'); ?></li>
+</ul>
+</li>
+<li>
+<strong>  <?php echo $this->translate('Wie gaat verder'); ?></strong>
+<ul>
+<li><?php echo $this->translate('5 punten voor iedere voorspelde achtste finalist'); ?> </li>
+<li><?php echo $this->translate('7 punten voor iedere voorspelde kwartfinalist'); ?></li>
+<li><?php echo $this->translate('10 punten voor iedere voorspelde halve finalist'); ?></li>
+<li><?php echo $this->translate('15 punten voor iedere voorspelde finalist'); ?></li>
+<li><?php echo $this->translate('20 punten indien je de Europees kampioen voorspelde'); ?></li>
+</ul>
+</li>
+<li>
+<strong>  <?php echo $this->translate('Het aantal doelpunten'); ?></strong>
+<ul>
+<?php echo $this->translate('Als je het aantal doelpunten correct voorspelt, krijg je twintig punten. Per goal afwijking gaat er een punt af.'); ?>
+<br>
+<?php echo $this->translate('De penalty’s na de verlengingen tellen niet mee als doelpunten.'); ?>
+</ul>
+</li>
+</ol>
+
+<h3><?php echo $this->translate('De winnaar is hij/zij die op het einde van de rit het meeste punten heeft.'); ?></h3>
+<br/>
+<h3><?php echo $this->translate('Inleg: 5 euro'); ?></h3>
+<br/>
+<h3>
+
+<?php echo $this->translate('De winnaar krijgt'); ?>&nbsp;<u><?php echo $this->translate('70%'); ?></u>&nbsp;<?php echo $this->translate('van de pot.'); ?>
+&nbsp;<?php echo $this->translate('De tweede krijgt'); ?>&nbsp;<u><?php echo $this->translate('20%'); ?></u>.
+&nbsp;<?php echo $this->translate('De derde krijgt'); ?>&nbsp;<u><?php echo $this->translate('10%'); ?></u>.
+<br/>
+
+<br/>
+
+</h3>
+<br/>
+<h3><?php echo $this->translate('De inschrijvingen moeten ten laatste'); ?>&nbsp;<u><?php echo $this->translate('woensdag 13 juni'); ?></u>&nbsp;<?php echo $this->translate('online binnen zijn.'); ?></h3>
+<br/>
+
+<table width="100%" cellspacing="1" cellpadding="1" border="0">
+<tbody>
+<tr>
+<td align="left">
+<img width="200" border="0" style="border:none;" src="<?php echo $this->baseUrl().'/images/mascotte2.jpg';?>">
+</td>
+<td valign="bottom" align="right">
+<p>
+<a href="mailto:thomas_vanhuysse@hotmail.com?Subject=EK Prono" target="_top">@Thomas</a>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</fieldset>
