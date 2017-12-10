@@ -8,7 +8,7 @@ class Zend_View_Helper_GetFinaleWedstrijden extends Zend_View_Helper_Abstract
 {
 		
         public function GetFinaleWedstrijden($id, $ploegen, $wedstrijden){
-           $finale=array("8"=>"AchtsteFinale","4"=>"Kwartfinale","2"=>"Halvefinale","1"=>"Finale");
+           $finale=array("8"=>"AchtsteFinale","4"=>"Kwartfinale","2"=>"Halvefinale","1"=>"Troostfinale", "0"=>"Finale");
            $htm=null;        	
 			 $htm  = "<div class='hoofding'>". $this->view->translate(trim($finale[$id])) ."</div>";
 			 $htm .= "<div class='groep'>";
@@ -84,7 +84,7 @@ class Zend_View_Helper_GetFinaleWedstrijden extends Zend_View_Helper_Abstract
         }
         
         private function getGroep($value, $flag=0) { 	
-        	 $groepen=array("","A","B","C","D","E","F");         
+        	 $groepen=array("","A","B","C","D","E","F","G","H");         
         	 if ($flag) {
         	 	$groep=$value;
         	 }  

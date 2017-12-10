@@ -62,12 +62,12 @@ $this->jQuery()->onLoadCaptureStart(); ?>
                         data: {f1: $(Field1).val(), f2: $(Field2).val(), w:$value},
                         success: function(html){                        	
                         	var strArray = html.split(":::"); 
-                        	//if (strArray[0]=="64_1") {
-                        		//$("#63_1").empty().append(strArray[1]);
-                        	//}
-                        	//if (strArray[0]=="64_2") {
-                        		//$("#63_2").empty().append(strArray[1]);
-                        	//}
+                        	if (strArray[0]=="64_1") {
+                        		$("#63_1").empty().append(strArray[1]);
+                        	}
+                        	if (strArray[0]=="64_2") {
+                        		$("#63_2").empty().append(strArray[1]);
+                        	}
                             $("#"+strArray[0]).empty().append(strArray[1]);
                             }
                        });
